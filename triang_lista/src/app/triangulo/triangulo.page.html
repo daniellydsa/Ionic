@@ -1,0 +1,28 @@
+<ion-header>
+    <ion-toolbar color="dark">
+      <ion-title>Área do Triângulo</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label position="floating">Base</ion-label>
+      <ion-input type="text" [(ngModel)]="base"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Altura</ion-label>
+      <ion-input type="text" [(ngModel)]="altura"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-button color="dark" (click)="calcula()">
+        <ion-icon name="calculator"></ion-icon>
+         Calcular área
+      </ion-button>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Resultado</ion-label>
+      <ion-input type="text" [(ngModel)]="resultado"></ion-input>
+    </ion-item>
+  </ion-list>
+</ion-content>
