@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Inverte nome
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-input placeholder="Nome" type="text" [(ngModel)]="nome"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-button color="dark" (click)="inverter()">Inverter nome</ion-button>
+    </ion-item>
+    <ion-item>
+        <ion-input placeholder="Invertido" type="text" [(ngModel)]="inverso"></ion-input>
+      </ion-item>
+  </ion-list>
+</ion-content>
