@@ -7,27 +7,31 @@
   <ion-list>
     <ion-item-sliding *ngFor="let a of alunos; let i = index">
       <ion-item>
-        <p>Nome: {{a.nome}} Nota: {{a.nota}}</p>
+        <h3>Nome: {{a.nome}} &nbsp; Nota: {{a.nota}}</h3>
       </ion-item>
       <ion-item-options side="end">
         <ion-button color="danger" (click)="remove(i)">
           <ion-icon name="trash"></ion-icon>
-          Excluir
+          &nbsp; Excluir
         </ion-button>
       </ion-item-options>
     </ion-item-sliding>
+  </ion-list>
+  <!-- <ion-button (click)="presentAlertPrompt()">Add</ion-button> -->
+  <ion-list class="form">
+    <h2>Adicionar</h2>
     <ion-item>
-      <ion-label position="stacked">Nome</ion-label>
-      <ion-input type="text" [(ngModel)]="a.nome"></ion-input>
+      <ion-label position="floating">Nome</ion-label>
+      <ion-input name="name1" type="text" [(ngModel)]="a.nome"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label position="stacked">Nota</ion-label>
-      <ion-input type="text" [(ngModel)]="a.nota"></ion-input>
+      <ion-label position="floating">Nota</ion-label>
+      <ion-input name="name2" type="text" [(ngModel)]="a.nota"></ion-input>
     </ion-item>
-    <ion-item>
-      <ion-button shape="round" color="dark" (click)="save()">
+    <ion-item lines="none">
+      <ion-button id="salvar" shape="round" color="dark" (click)="save()">
         <ion-icon name="save"></ion-icon>
-         Salvar
+        &nbsp; Salvar
       </ion-button>
     </ion-item>
     

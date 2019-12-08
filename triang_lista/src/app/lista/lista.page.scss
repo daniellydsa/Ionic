@@ -1,7 +1,17 @@
 ion-header {
     text-align: center;
 }
-ion-button {
+#salvar {
     width: 80%;
     margin: 0 auto;
 }
+.form h2 {
+    width: 90%;
+    margin: 0 auto;
+}
+ion-list {
+    margin: 5px;
+    border: solid black 1px;
+    border-radius: 5px;
+}
+

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-lista',
@@ -25,4 +26,46 @@ export class ListaPage implements OnInit {
 export class Aluno {
   nome: string;
   nota: number;
+}
+
+export class PromptAlert {
+
+  constructor(public alertCtrl: AlertController) {}
+
+  async presentAlertPrompt() {
+    const alert= await this.alertCtrl.create({
+      header:"Adicionar novo aluno!",
+      inputs: [
+        {
+          name: 'nome',
+          type: 'text',
+          placeholder:'Nome'
+        },
+        {
+          name: 'nota',
+          type: 'text',
+          placeholder:'Nota'
+        }
+      ],
+      buttons: [
+        {
+          text: 'Cancelar',
+          role: 'cancel',
+          cssClass: 'secondary',
+          handler: () => {
+            console.log('Confirm cancel');
+          }
+        }, {
+          text: 'Ok',
+          handler: () => {
+            console.log('Confirm ok');
+            let lp = new ListaPage();
+            lp.save();
+          }
+        }
+      ]
+    });
+    await alert.present();
+  }
+
 }
